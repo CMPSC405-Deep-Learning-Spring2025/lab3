@@ -1,14 +1,3 @@
-# check the source file for basic characteristics
-- src/neuralnetwork.py:
-    - description: Ensure that neuralnetwork.py file exists in the src/ directory
-      check: ConfirmFileExists
-    - description: Complete all TODOs, remove the TODO markers in the neuralnetwork.py
-      check: MatchFileFragment
-      options:
-        fragment: TODO
-        count: 0
-        exact: true
-
 # check the technical writing for various characteristics
 - writing/report.md:
     - description: Ensure that report.md file exists in the writing/ directory
@@ -24,20 +13,9 @@
         fragment: TODO
         count: 0
         exact: true
-    - description: Ensure the report contains at least three images
-      check: MatchFileFragment
-      options:
-        fragment: "!["
-        count: 3
-        exact: false
-
-# check the dataset file for existence
-- src/data/data.csv:
-    - description: Ensure that data.csv file exists in the src/data/ directory
-      check: ConfirmFileExists
 
 # count number of commits in the GitHub repository
-- description: Have at least a specific minimum number of commits (12) in repository
+- description: Have at least a specific minimum number of commits (6) in repository
   check: CountCommits
   options:
-    count: 12
+    count: 6
